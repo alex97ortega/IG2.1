@@ -66,7 +66,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Arbol.cpp" />
     <ClCompile Include="Cara.cpp" />
+    <ClCompile Include="Coche.cpp" />
+    <ClCompile Include="Escena.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Malla.cpp" />
     <ClCompile Include="ObjetoCompuesto.cpp" />
@@ -74,7 +77,10 @@
     <ClCompile Include="PuntoVector3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Arbol.h" />
     <ClInclude Include="Cara.h" />
+    <ClInclude Include="Coche.h" />
+    <ClInclude Include="Escena.h" />
     <ClInclude Include="Malla.h" />
     <ClInclude Include="Objeto3D.h" />
     <ClInclude Include="ObjetoCompuesto.h" />

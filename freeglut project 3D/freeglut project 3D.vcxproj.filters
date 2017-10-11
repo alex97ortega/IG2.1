@@ -33,6 +33,15 @@
     <ClCompile Include="ObjetoCuadrico.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Arbol.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Coche.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Escena.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cara.h">
@@ -51,6 +60,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ObjetoCuadrico.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Arbol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Coche.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Escena.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

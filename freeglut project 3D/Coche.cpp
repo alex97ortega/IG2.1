@@ -3,7 +3,6 @@
 
 Coche::Coche()
 {
-	//objetos[i]->push_back(cono,etc)
 }
 
 
