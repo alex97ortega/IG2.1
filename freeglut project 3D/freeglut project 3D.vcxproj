@@ -69,6 +69,7 @@
     <ClCompile Include="Arbol.cpp" />
     <ClCompile Include="Cara.cpp" />
     <ClCompile Include="Coche.cpp" />
+    <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Escena.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Malla.cpp" />
@@ -80,6 +81,7 @@
     <ClInclude Include="Arbol.h" />
     <ClInclude Include="Cara.h" />
     <ClInclude Include="Coche.h" />
+    <ClInclude Include="Cube.h" />
     <ClInclude Include="Escena.h" />
     <ClInclude Include="Malla.h" />
     <ClInclude Include="Objeto3D.h" />

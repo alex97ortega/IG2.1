@@ -10,7 +10,7 @@ public:
 	ObjetoCompuesto();
 	virtual ~ObjetoCompuesto();
 	void dibuja();
-private:
-	std::vector <Objeto3D*> objetos; // objetos que contiene(pueden ser compuestos o cuadricos
+protected:
+	std::vector <Objeto3D*> objetos; // objetos que contiene(pueden ser compuestos o cuadricos)
 };
 #endif

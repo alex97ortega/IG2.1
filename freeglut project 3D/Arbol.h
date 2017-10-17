@@ -2,13 +2,18 @@
 #define H_ARBOL_H
 
 #include "ObjetoCompuesto.h"
+#include "ObjetoCuadrico.h"
+#include "GL\freeglut.h"
 class Arbol :
 	public ObjetoCompuesto
 {
+	
 public:
-	Arbol();
-	virtual ~Arbol();
-private:
-	enum tipo{Abeto, Roble, Pino, Alamo};
+	enum Tipo{ Abeto, Roble, Pino, Alamo };
+
+	Arbol(Tipo t);
+	void dibuja();
+private:	
+	Tipo _t;
 };
 #endif

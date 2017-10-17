@@ -2,6 +2,8 @@
 #include <gl/GL.h>
 #include <gl/GLU.h>
 
+#include "Escena.h"
+
 #include <GL/freeglut.h>
 //#include <GL/glut.h>
 
@@ -24,13 +26,15 @@ GLdouble lookX=0.0, lookY=0.0, lookZ=0.0;
 GLdouble upX=0, upY=1, upZ=0;
 
 // Scene variables
-GLfloat angX, angY, angZ,mov; 
+GLfloat angX, angY, angZ; 
+Escena*e;
 
 void buildSceneObjects() {	 
     angX=0.0f;
     angY=0.0f;
 	angZ = 0.0f;
-	mov = 0.0f;
+
+	e = new Escena();
 }
 
 void initGL() {	 		 
@@ -69,54 +73,7 @@ void initGL() {
 	// Viewport set up
     glViewport(0, 0, WIDTH, HEIGHT);  	
  }
-void coche(){
 
-	glPushMatrix();
-	glTranslatef(mov, 2, 0);
-
-	glPushMatrix();
-	glTranslatef(0, 0.5, 0);
-	glColor3f(1.0, 0, 1.0);
-	glutSolidCube(4);
-	glPopMatrix();
-
-	glPushMatrix();
-	glColor3f(0, 1.0, 0);
-	glTranslatef(1.5, 0.3, -1);
-	glRotatef(90, 0, 1, 0);
-	glutSolidCylinder(0.3, 1, 10, 10);
-	glTranslatef(-2, 0, 0);
-	glutSolidCylinder(0.3, 1, 10, 10);
-	glPopMatrix();
-
-	glPushMatrix();
-	glColor3f(0, 0, 0);
-	glTranslatef(1.2, -1, -3);
-	glutSolidCylinder(1, 1, 10, 10);
-	glTranslatef(-2.5, 0, 0);
-	glutSolidCylinder(1, 1, 10, 10);
-	glPopMatrix();
-
-	glPushMatrix();
-	glColor3f(0, 0, 0);
-	glTranslatef(1.2, -1, 2);
-	glutSolidCylinder(1, 1, 10, 10);
-	glTranslatef(-2.5, 0, 0);
-	glutSolidCylinder(1, 1, 10, 10);
-	glPopMatrix();
-	glPopMatrix();
-}
-void arboles(){
-	glPushMatrix();
-	glTranslatef(7, 0, -3);
-	glRotatef(-90, 1, 0, 0);
-	glColor3f(0.5, 0.6, 0.2);
-	glutSolidCylinder(1, 4, 10, 10);
-	glTranslatef(0, 0, 5);
-	glColor3f(0, 1, 0);
-	glutSolidSphere(1, 10, 10);	
-	glPopMatrix();
-}
 void display(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  
 	 
@@ -146,8 +103,7 @@ void display(void) {
 		// Drawing the scene	 		 
 		//glColor3f(1.0, 1.0, 1.0);
 		//glutSolidSphere(6, 50, 60); //Sphere: radius=6, meridians=50, parallels=60
-		coche();
-		arboles();
+		e->dibuja();
 	glPopMatrix();
  
 	glFlush();
@@ -196,8 +152,8 @@ void key(unsigned char key, int x, int y){
 		case 'x': angY=angY-5; break;
 		case 'd': angZ=angZ+5; break;
 		case 'c': angZ=angZ-5; break;  
-		case 'q': mov++; break;
-		case 'w': mov--; break;
+		//case 'q': e->mover(-1); break;
+		//case 'w': e->mover(1); break;
 		default:
 			need_redisplay = false;
 			break;
