@@ -7,7 +7,8 @@ class ObjetoCuadrico :
 public:
 	ObjetoCuadrico();
 	virtual ~ObjetoCuadrico();
-private:
+protected:
+	GLUquadric* _o;
 	//clases para los objetos
 };
 #endif

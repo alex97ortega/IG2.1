@@ -3,7 +3,6 @@
 
 #include "ObjetoCompuesto.h"
 #include "ObjetoCuadrico.h"
-#include "GL\freeglut.h"
 class Arbol :
 	public ObjetoCompuesto
 {

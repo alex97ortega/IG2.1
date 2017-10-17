@@ -3,8 +3,13 @@
 
 Coche::Coche()
 {
+	o = gluNewQuadric();
 	mov = 0;
+
 	objetos.push_back(new Cube(4)); //CARROCERIA
+
+	objetos.push_back(new Cylinder(o, 0.3, 0.3, 1)); //FARO1
+	objetos.push_back(new Cylinder(o, 0.3, 0.3, 1)); //FARO2
 }
 
 void Coche::dibuja(){
@@ -23,9 +28,9 @@ void Coche::dibuja(){
 	glColor3f(0, 1.0, 0);
 	glTranslatef(1.5, 0.3, -1);
 	glRotatef(90, 0, 1, 0);
-	glutSolidCylinder(0.3, 1, 10, 10);//cambiar faro1->dibuja()
+	FARO1->dibuja();
 	glTranslatef(-2, 0, 0);
-	glutSolidCylinder(0.3, 1, 10, 10);//cambiar
+	FARO2->dibuja();
 	glPopMatrix();
 
 	//ruedas

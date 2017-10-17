@@ -2,7 +2,6 @@
 #define H_CUBE_H
 
 #include "ObjetoCuadrico.h"
-#include "GL\freeglut.h"
 
 class Cube :
 	public ObjetoCuadrico

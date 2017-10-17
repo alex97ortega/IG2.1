@@ -11,6 +11,7 @@ public:
 	virtual ~ObjetoCompuesto();
 	void dibuja();
 protected:
+	GLUquadric* _o;
 	std::vector <Objeto3D*> objetos; // objetos que contiene(pueden ser compuestos o cuadricos)
 };
 #endif
