@@ -45,9 +45,6 @@
     <ClCompile Include="Coche.cpp">
       <Filter>Source Files\ObjetosCompuestos</Filter>
     </ClCompile>
-    <ClCompile Include="Cara.cpp">
-      <Filter>Source Files\ObjetosCompuestos</Filter>
-    </ClCompile>
     <ClCompile Include="Escena.cpp">
       <Filter>Source Files\ObjetosCompuestos</Filter>
     </ClCompile>
@@ -72,6 +69,12 @@
     <ClCompile Include="Rueda.cpp">
       <Filter>Source Files\ObjetosCompuestos</Filter>
     </ClCompile>
+    <ClCompile Include="CopaDoble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TAfin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PuntoVector3D.h">
@@ -90,9 +93,6 @@
       <Filter>Header Files\ObjetosCompuestos</Filter>
     </ClInclude>
     <ClInclude Include="Coche.h">
-      <Filter>Header Files\ObjetosCompuestos</Filter>
-    </ClInclude>
-    <ClInclude Include="Cara.h">
       <Filter>Header Files\ObjetosCompuestos</Filter>
     </ClInclude>
     <ClInclude Include="Escena.h">
@@ -118,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="Rueda.h">
       <Filter>Header Files\ObjetosCompuestos</Filter>
+    </ClInclude>
+    <ClInclude Include="CopaDoble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TAfin.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

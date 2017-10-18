@@ -1,15 +1,20 @@
 #include "Coche.h"
-#include <iostream>
+#include "Rueda.h"
 
 Coche::Coche()
 {
-	o = gluNewQuadric();
+	_o = gluNewQuadric();
 	mov = 0;
 
 	objetos.push_back(new Cube(4)); //CARROCERIA
+	
+	objetos.push_back(new Cylinder(_o, 0.3, 0.3, 1)); //FARO1
+	objetos.push_back(new Cylinder(_o, 0.3, 0.3, 1)); //FARO2
 
-	objetos.push_back(new Cylinder(o, 0.3, 0.3, 1)); //FARO1
-	objetos.push_back(new Cylinder(o, 0.3, 0.3, 1)); //FARO2
+	objetos.push_back(new Rueda(_o, 1, 1)); //RUEDA_ID
+	objetos.push_back(new Rueda(_o, 1, 1)); //RUEDA_IA
+	objetos.push_back(new Rueda(_o, 1, 1)); //RUEDA_DD
+	objetos.push_back(new Rueda(_o, 1, 1)); //RUEDA_DA
 }
 
 void Coche::dibuja(){
@@ -37,18 +42,16 @@ void Coche::dibuja(){
 	glPushMatrix();
 	glColor3f(0, 0, 0);
 	glTranslatef(1.2, -1, -3);
-	glutSolidCylinder(1, 1, 10, 10);//cambiar 
+	RUEDA_ID->dibuja();
 	glTranslatef(-2.5, 0, 0);
-	glutSolidCylinder(1, 1, 10, 10);//cambiar
+	RUEDA_IA->dibuja();
+	glRotatef(180, 0, 1, 0);
+	glTranslatef(-2.5, 0, -6);
+	RUEDA_DD->dibuja();
+	glTranslatef(2.5, 0, 0);
+	RUEDA_DA->dibuja();
 	glPopMatrix();
 
-	glPushMatrix();
-	glColor3f(0, 0, 0);
-	glTranslatef(1.2, -1, 2);
-	glutSolidCylinder(1, 1, 10, 10);//cambiar
-	glTranslatef(-2.5, 0, 0);
-	glutSolidCylinder(1, 1, 10, 10);//cambiar
-	glPopMatrix();
 	glPopMatrix();
 }
 void Coche::mover(short int n){ // método público que para que se pueda acceder desde el main

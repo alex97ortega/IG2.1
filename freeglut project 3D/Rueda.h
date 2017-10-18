@@ -6,7 +6,6 @@ class Rueda :
 public:
 	Rueda(GLUquadric* o, GLfloat _radio, GLfloat _ancho);
 	virtual ~Rueda(){}
-	dibuja();
 private:
 	GLfloat _radio, _ancho;
 };

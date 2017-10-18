@@ -67,8 +67,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arbol.cpp" />
-    <ClCompile Include="Cara.cpp" />
     <ClCompile Include="Coche.cpp" />
+    <ClCompile Include="CopaDoble.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Cylinder.cpp" />
     <ClCompile Include="Disk.cpp" />
@@ -81,11 +81,12 @@
     <ClCompile Include="PuntoVector3D.cpp" />
     <ClCompile Include="Rueda.cpp" />
     <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="TAfin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbol.h" />
-    <ClInclude Include="Cara.h" />
     <ClInclude Include="Coche.h" />
+    <ClInclude Include="CopaDoble.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Cylinder.h" />
     <ClInclude Include="Disk.h" />
@@ -98,6 +99,7 @@
     <ClInclude Include="PuntoVector3D.h" />
     <ClInclude Include="Rueda.h" />
     <ClInclude Include="Sphere.h" />
+    <ClInclude Include="TAfin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

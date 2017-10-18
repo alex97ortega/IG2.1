@@ -13,7 +13,11 @@ ObjetoCompuesto::~ObjetoCompuesto()
 	}
 }
 void ObjetoCompuesto::dibuja(){
-	for (auto o : objetos){
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	//glMultMatrix(this->mT->m);
+	for (auto o : objetos)
+		//Metodo que coloque el objeto antes de dibujarlo 
 		o->dibuja();
-	}
+	glPopMatrix();
 }

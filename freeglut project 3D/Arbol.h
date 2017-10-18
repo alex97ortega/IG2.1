@@ -3,6 +3,9 @@
 
 #include "ObjetoCompuesto.h"
 #include "ObjetoCuadrico.h"
+
+#define TRONCO objetos[0]
+#define COPA objetos[1]
 class Arbol :
 	public ObjetoCompuesto
 {

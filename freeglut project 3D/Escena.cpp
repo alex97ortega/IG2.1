@@ -1,6 +1,5 @@
 #include "Escena.h"
 
-
 Escena::Escena()
 {
 	objetos.push_back(new Coche());
