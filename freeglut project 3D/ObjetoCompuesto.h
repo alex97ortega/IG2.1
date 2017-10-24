@@ -3,6 +3,7 @@
 
 #include "Objeto3D.h"
 #include <vector>
+#include "PuntoVector3D.h"
 class ObjetoCompuesto :
 	public Objeto3D
 {

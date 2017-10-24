@@ -8,7 +8,6 @@ public:
 	ObjetoCuadrico();
 	virtual ~ObjetoCuadrico();
 protected:
-	GLUquadric* _o;
-	//clases para los objetos
+	GLUquadric* _o;	
 };
 #endif

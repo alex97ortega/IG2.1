@@ -11,5 +11,10 @@ ParcialDisk::ParcialDisk(GLUquadric* o, GLfloat inR, GLfloat outR, GLfloat fAng,
 }
 
 void ParcialDisk::dibuja(){
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glMultMatrixf(mT->getm());
+	glColor3f(r, g, b);
 	gluPartialDisk(_o, _inR, _outR, 10, 10, _fAng, _sAng);
+	glPopMatrix();
 }

@@ -3,7 +3,6 @@
 
 Coche::Coche()
 {
-	_o = gluNewQuadric();
 	mov = 0;
 
 	objetos.push_back(new Cube(4)); //CARROCERIA
@@ -17,7 +16,7 @@ Coche::Coche()
 	objetos.push_back(new Rueda(_o, 1, 1)); //RUEDA_DA
 }
 
-void Coche::dibuja(){
+/*void Coche::dibuja(){
 	
 	glPushMatrix();
 	glTranslatef(mov, 2, 0);
@@ -53,7 +52,7 @@ void Coche::dibuja(){
 	glPopMatrix();
 
 	glPopMatrix();
-}
+}*/
 void Coche::mover(short int n){ // método público que para que se pueda acceder desde el main
 	mov += n;
 	dibuja();

@@ -69,11 +69,11 @@
     <ClCompile Include="Rueda.cpp">
       <Filter>Source Files\ObjetosCompuestos</Filter>
     </ClCompile>
-    <ClCompile Include="CopaDoble.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TAfin.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CopaDoble.cpp">
+      <Filter>Source Files\ObjetosCompuestos</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -119,11 +119,11 @@
     <ClInclude Include="Rueda.h">
       <Filter>Header Files\ObjetosCompuestos</Filter>
     </ClInclude>
-    <ClInclude Include="CopaDoble.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="TAfin.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CopaDoble.h">
+      <Filter>Header Files\ObjetosCompuestos</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

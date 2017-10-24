@@ -10,5 +10,11 @@ Disk::Disk(GLUquadric* o, GLfloat inR, GLfloat outR)
 
 
 void Disk::dibuja(){
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glMultMatrixf(mT->getm());
+	glColor3f(r, g, b);
 	gluDisk(_o, _inR, _outR, 10, 10);
+	glPopMatrix();
+	
 }

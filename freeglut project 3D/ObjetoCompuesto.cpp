@@ -3,6 +3,7 @@
 
 ObjetoCompuesto::ObjetoCompuesto()
 {
+	_o = gluNewQuadric();
 }
 
 
@@ -15,7 +16,7 @@ ObjetoCompuesto::~ObjetoCompuesto()
 void ObjetoCompuesto::dibuja(){
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
-	//glMultMatrix(this->mT->m);
+	glMultMatrixf(mT->getm());
 	for (auto o : objetos)
 		//Metodo que coloque el objeto antes de dibujarlo 
 		o->dibuja();

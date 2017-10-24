@@ -9,9 +9,10 @@ public:
 	TAfin();
 	virtual ~TAfin();
 	void postMultiplica(GLfloat* m1);
-	void traslada(PuntoVector3D* v);
-	void rota(PuntoVector3D* v);
-
+	void translate(PuntoVector3D* v);
+	void rotate(GLfloat ang, PuntoVector3D* v);
+	void scale(PuntoVector3D* v);
+	GLfloat *getm();
 private:
 	GLfloat m[16];
 };

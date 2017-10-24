@@ -14,7 +14,6 @@ public:
 	enum Tipo{ Abeto, Roble, Pino, Alamo };
 
 	Arbol(Tipo t);
-	void dibuja();
 private:	
 	Tipo _t;
 };

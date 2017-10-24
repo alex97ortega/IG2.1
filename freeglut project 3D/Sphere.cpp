@@ -9,5 +9,10 @@ Sphere::Sphere(GLUquadric* o, GLfloat r)
 
 
 void Sphere::dibuja(){
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glMultMatrixf(mT->getm());
+	glColor3f(r, g, b);
 	gluSphere(_o, _r, 30, 30);
+	glPopMatrix();
 }

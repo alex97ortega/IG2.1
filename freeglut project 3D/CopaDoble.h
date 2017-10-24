@@ -11,7 +11,6 @@ public:
 	enum Tipo{ Pino, Alamo };
 	CopaDoble(Tipo copa);
 	virtual ~CopaDoble(){}
-	void dibuja();
 private:
 	Tipo _copa;
 };

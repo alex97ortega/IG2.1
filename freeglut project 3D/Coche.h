@@ -18,7 +18,7 @@ class Coche :
 {
 public:
 	Coche();
-	void dibuja();
+	
 	void mover(short int n);
 private:
 	GLdouble mov;

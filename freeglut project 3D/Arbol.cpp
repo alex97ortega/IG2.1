@@ -1,12 +1,13 @@
 #include "Arbol.h"
-
+#include "Cylinder.h"
 
 Arbol::Arbol(Tipo t)
 {
 	_t = t;
+	//objetos.push_back(new Cylinder(_o, 0.3, 0.3, 1));
 }
 
-void Arbol::dibuja(){
+/*void Arbol::dibuja(){
 	switch (_t)
 	{
 	case Arbol::Abeto: // 1 CONO
@@ -56,4 +57,4 @@ void Arbol::dibuja(){
 	default:
 		break;
 	}	
-}
+}*/

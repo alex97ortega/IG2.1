@@ -6,11 +6,12 @@
 class Objeto3D
 {
 public:
-	Objeto3D() {};
+	Objeto3D() { mT = new TAfin(); };
 	virtual ~Objeto3D(){};
 	virtual void dibuja() = 0;
+	TAfin* mT;	
 protected:
-	TAfin* mT;
+	GLfloat r, g, b;
 };
 
 #endif
