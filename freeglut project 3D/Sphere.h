@@ -6,10 +6,10 @@ class Sphere :
 	public ObjetoCuadrico
 {
 public:
-	Sphere(GLUquadric* o, GLfloat r);
+	Sphere(GLUquadric* o, GLfloat rad, GLfloat r, GLfloat g, GLfloat b);
 	virtual ~Sphere(){}
 	void dibuja();
 private:
-	GLfloat _r;
+	GLfloat _rad;
 };
 #endif

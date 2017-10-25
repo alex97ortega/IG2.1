@@ -7,7 +7,7 @@ class Cube :
 	public ObjetoCuadrico
 {
 public:
-	Cube(int tam);
+	Cube(int tam, GLfloat r, GLfloat g, GLfloat b);
 	virtual ~Cube();
 	void dibuja();
 private:

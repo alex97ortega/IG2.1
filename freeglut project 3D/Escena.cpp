@@ -2,11 +2,9 @@
 
 Escena::Escena()
 {
-	objetos.push_back(new Coche());
-	objetos.push_back(new Arbol(Arbol::Abeto)); 
+	objetos.push_back(new Arbol(Arbol::Alamo));
 
-
-	PuntoVector3D * v = new PuntoVector3D(10, 10, 0, 1);
-	objetos[0]->mT->translate(v);
-
+	//EL COCHE SIEMPRE HABRA QUE ELVARLO 2 PARA QUE SE APOYE EN EL PLANO XZ
+	/*PuntoVector3D * v = new PuntoVector3D(0, 2, 0, 1);
+	objetos[0]->mT->translate(v);*/
 }

@@ -7,8 +7,8 @@ Rueda::Rueda(GLUquadric* o , GLfloat radio, GLfloat ancho)
 	_radio = radio; 
 	_ancho = ancho;
 
-	objetos.push_back(new Cylinder(o, _radio, _radio, _ancho));
-	objetos.push_back(new Disk(o, 0, _radio));
+	objetos.push_back(new Cylinder(o, _radio, _radio, _ancho, 0, 0, 0));
+	objetos.push_back(new Disk(o, 0, _radio, 0, 0, 0));
 }
 
 

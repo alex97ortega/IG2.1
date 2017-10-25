@@ -6,7 +6,7 @@ class Disk :
 	public ObjetoCuadrico
 {
 public:
-	Disk(GLUquadric* o, GLfloat inR, GLfloat outR);
+	Disk(GLUquadric* o, GLfloat inR, GLfloat outR, GLfloat r, GLfloat g, GLfloat b);
 	virtual ~Disk(){}
 	void dibuja();
 private:

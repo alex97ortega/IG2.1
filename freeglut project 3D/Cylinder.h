@@ -6,7 +6,7 @@ class Cylinder :
 	public ObjetoCuadrico
 {
 public:
-	Cylinder(GLUquadric* o, GLfloat r1, GLfloat r2, GLfloat h);
+	Cylinder(GLUquadric* o, GLfloat r1, GLfloat r2, GLfloat h, GLfloat r, GLfloat g, GLfloat b);
 	virtual ~Cylinder(){}
 	void dibuja();
 private:

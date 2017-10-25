@@ -11,7 +11,7 @@ public:
 	virtual void dibuja() = 0;
 	TAfin* mT;	
 protected:
-	GLfloat r, g, b;
+	GLfloat _r, _g, _b;
 };
 
 #endif

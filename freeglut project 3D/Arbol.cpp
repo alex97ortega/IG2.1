@@ -1,60 +1,45 @@
 #include "Arbol.h"
 #include "Cylinder.h"
+#include "Sphere.h"
+#include "CopaDoble.h"
 
 Arbol::Arbol(Tipo t)
 {
 	_t = t;
-	//objetos.push_back(new Cylinder(_o, 0.3, 0.3, 1));
-}
 
-/*void Arbol::dibuja(){
+	//Tronco
+	objetos.push_back(new Cylinder(_o, 0.8, 0.6, 4, 0, 1, 0.4));
+	PuntoVector3D * v = new PuntoVector3D(1, 0, 0, 0);
+	objetos[0]->mT->rotate(-90, v);
+
 	switch (_t)
 	{
 	case Arbol::Abeto: // 1 CONO
-		glPushMatrix();
-		glTranslatef(7, 0, -3);
-		glRotatef(-90, 1, 0, 0);
-		glColor3f(0.5, 0.6, 0.2);
-		glutSolidCylinder(1, 4, 10, 10);//cambiar
-		glTranslatef(0, 0, 5);
-		glColor3f(0, 1, 0);
-		glutSolidSphere(1, 10, 10);//cambiar
-		glPopMatrix();
+		objetos.push_back(new Cylinder(_o, 1.5, 0, 4, 0, 1, 0));
+		v = new PuntoVector3D(0, 4, 0, 1);
+		objetos[1]->mT->translate(v);
+		v = new PuntoVector3D(1, 0, 0, 1);
+		objetos[1]->mT->rotate(-90, v); 
 		break;
 	case Arbol::Roble: // 1 ESFERA
-		glPushMatrix();
-		glTranslatef(7, 0, -3);
-		glRotatef(-90, 1, 0, 0);
-		glColor3f(0.5, 0.6, 0.2);
-		glutSolidCylinder(1, 4, 10, 10);//cambiar
-		glTranslatef(0, 0, 5);
-		glColor3f(0, 1, 0);
-		glutSolidSphere(1, 10, 10);//cambiar
-		glPopMatrix();
+		objetos.push_back(new Sphere(_o, 2, 0, 1, 0));
+		v = new PuntoVector3D(0, 6, 0, 1);
+		objetos[1]->mT->translate(v);
+
 		break;
 	case Arbol::Pino: // 2 CONOS
-		glPushMatrix();
-		glTranslatef(7, 0, -3);
-		glRotatef(-90, 1, 0, 0);
-		glColor3f(0.5, 0.6, 0.2);
-		glutSolidCylinder(1, 4, 10, 10);//cambiar
-		glTranslatef(0, 0, 5);
-		glColor3f(0, 1, 0);
-		glutSolidSphere(1, 10, 10);//cambiar
-		glPopMatrix();
+		objetos.push_back(new CopaDoble(CopaDoble::Pino));
+		v = new PuntoVector3D(0, 4, 0, 1);
+		objetos[1]->mT->translate(v);
+		v = new PuntoVector3D(1, 0, 0, 1);
+		objetos[1]->mT->rotate(-90, v);
 		break;
 	case Arbol::Alamo: // 2 ESFERAS
-		glPushMatrix();
-		glTranslatef(7, 0, -3);
-		glRotatef(-90, 1, 0, 0);
-		glColor3f(0.5, 0.6, 0.2);
-		glutSolidCylinder(1, 4, 10, 10);//cambiar
-		glTranslatef(0, 0, 5);
-		glColor3f(0, 1, 0);
-		glutSolidSphere(1, 10, 10);//cambiar
-		glPopMatrix();
+		objetos.push_back(new CopaDoble(CopaDoble::Alamo));
+		v = new PuntoVector3D(0, 5.5, 0, 1);
+		objetos[1]->mT->translate(v);
 		break;
 	default:
 		break;
-	}	
-}*/
+	}
+}
