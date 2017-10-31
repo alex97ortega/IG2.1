@@ -25,12 +25,15 @@
     <Filter Include="Header Files\ObjetosCuádricos">
       <UniqueIdentifier>{fe652e1f-cda6-4f61-8b51-491faaba3842}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Fijas">
+      <UniqueIdentifier>{5ea881c1-a068-4aa1-8bdd-c7ad1aee876c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Fijas">
+      <UniqueIdentifier>{5e7c49da-a891-43bf-9c2c-6cebf0478ea6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PuntoVector3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ObjetoCompuesto.cpp">
@@ -54,9 +57,6 @@
     <ClCompile Include="Cylinder.cpp">
       <Filter>Source Files\ObjetosCuádricos</Filter>
     </ClCompile>
-    <ClCompile Include="Malla.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Disk.cpp">
       <Filter>Source Files\ObjetosCuádricos</Filter>
     </ClCompile>
@@ -75,11 +75,23 @@
     <ClCompile Include="CopaDoble.cpp">
       <Filter>Source Files\ObjetosCompuestos</Filter>
     </ClCompile>
+    <ClCompile Include="CopaSimple.cpp">
+      <Filter>Source Files\ObjetosCompuestos</Filter>
+    </ClCompile>
+    <ClCompile Include="Cara.cpp">
+      <Filter>Source Files\Fijas</Filter>
+    </ClCompile>
+    <ClCompile Include="Malla.cpp">
+      <Filter>Source Files\Fijas</Filter>
+    </ClCompile>
+    <ClCompile Include="PuntoVector3D.cpp">
+      <Filter>Source Files\Fijas</Filter>
+    </ClCompile>
+    <ClCompile Include="VerticeNormal.cpp">
+      <Filter>Source Files\Fijas</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PuntoVector3D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Objeto3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -104,9 +116,6 @@
     <ClInclude Include="Cylinder.h">
       <Filter>Header Files\ObjetosCuádricos</Filter>
     </ClInclude>
-    <ClInclude Include="Malla.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Disk.h">
       <Filter>Header Files\ObjetosCuádricos</Filter>
     </ClInclude>
@@ -119,11 +128,26 @@
     <ClInclude Include="Rueda.h">
       <Filter>Header Files\ObjetosCompuestos</Filter>
     </ClInclude>
-    <ClInclude Include="TAfin.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CopaDoble.h">
       <Filter>Header Files\ObjetosCompuestos</Filter>
+    </ClInclude>
+    <ClInclude Include="CopaSimple.h">
+      <Filter>Header Files\ObjetosCompuestos</Filter>
+    </ClInclude>
+    <ClInclude Include="Cara.h">
+      <Filter>Header Files\Fijas</Filter>
+    </ClInclude>
+    <ClInclude Include="Malla.h">
+      <Filter>Header Files\Fijas</Filter>
+    </ClInclude>
+    <ClInclude Include="VerticeNormal.h">
+      <Filter>Header Files\Fijas</Filter>
+    </ClInclude>
+    <ClInclude Include="PuntoVector3D.h">
+      <Filter>Header Files\Fijas</Filter>
+    </ClInclude>
+    <ClInclude Include="TAfin.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

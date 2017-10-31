@@ -9,7 +9,7 @@ CopaDoble::CopaDoble(Tipo copa)
 	if (_copa == Tipo::Pino){
 		objetos.push_back(new Cylinder(_o, 1.5, 0, 3, 0, 1, 0));
 		objetos.push_back(new Cylinder(_o, 1, 0, 3, 0, 1, 0));
-		v = new PuntoVector3D(0, 0, 1, 1);
+		v = new PuntoVector3D(0, 0, 2, 1);
 		objetos[1]->mT->translate(v);
 	}
 	else {

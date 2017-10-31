@@ -1,7 +1,7 @@
 
 #include "Malla.h"
 
-/*Malla::Malla(int nV, int nN, int nC, PuntoVector3D** v, PuntoVector3D** n, Cara** c) {
+Malla::Malla(int nV, int nN, int nC, PuntoVector3D** v, PuntoVector3D** n, Cara** c) {
 	numeroVertices = nV;
 	vertice = v;
 	numeroNormales = nN;
@@ -50,6 +50,6 @@ void Malla::dibuja() {
 		glEnd();
 	}
 }
-*/
+
 
 

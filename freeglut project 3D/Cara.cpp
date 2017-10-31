@@ -1,6 +1,5 @@
-
 #include "Cara.h"
-/*
+
 Cara::Cara(int nV, VerticeNormal** aVN) {
 	numeroVertices = nV;
 	arrayVerticeNormal = aVN;
@@ -23,6 +22,3 @@ int Cara::getIndiceVerticeK(int k) {
 int Cara::getIndiceNormalK(int k) {
 	return arrayVerticeNormal[k]->getIN();
 }
-*/
-
-

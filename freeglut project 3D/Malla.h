@@ -1,7 +1,7 @@
 
-/*#ifndef Malla_H_
+#ifndef Malla_H_
 #define Malla_H_
-/*
+
 #include "PuntoVector3D.h"
 #include "Cara.h"
 
@@ -23,4 +23,3 @@ public:
 	virtual void dibuja();
 };
 #endif
-*/

@@ -9,5 +9,7 @@ class Escena :
 {
 public:
 	Escena();
+private:
+	int numArboles;
 };
 #endif

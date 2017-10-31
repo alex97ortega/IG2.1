@@ -1,4 +1,5 @@
-#pragma once
+#ifndef H_COPADOBLE_H
+#define H_COPADOBLE_H
 #include "ObjetoCompuesto.h"
 
 #define COPA1 objetos[0]
@@ -15,3 +16,4 @@ private:
 	Tipo _copa;
 };
 
+#endif

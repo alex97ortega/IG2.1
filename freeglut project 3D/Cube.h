@@ -2,6 +2,10 @@
 #define H_CUBE_H
 
 #include "ObjetoCuadrico.h"
+#include "Malla.h"
+
+#include "PuntoVector3D.h"
+#include "Cara.h"
 
 class Cube :
 	public ObjetoCuadrico

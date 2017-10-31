@@ -1,5 +1,4 @@
-
-/*#ifndef Cara_H_
+#ifndef Cara_H_
 #define Cara_H_
 
 #include "VerticeNormal.h"
@@ -16,4 +15,3 @@ public:
 	int getIndiceNormalK(int k);
 };
 #endif
-*/
