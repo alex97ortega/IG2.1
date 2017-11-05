@@ -48,7 +48,38 @@ Coche::Coche()
 	RUEDA_DA->mT->translate(v);
 }
 
-void Coche::mover(short int n){ // método público que para que se pueda acceder desde el main
-	mov += n;
-	dibuja();
+void Coche::avanzaIzquierda(){ 
+
+	PuntoVector3D * v = new PuntoVector3D(3, 0, 0, 0);
+	mT->translate(v);
+
+	v = new PuntoVector3D(0, 1, 0, 0);
+	mT->rotate(10, v);
+}
+
+void Coche::avanzaDerecha() { // método público que para que se pueda acceder desde el main
+
+	PuntoVector3D * v = new PuntoVector3D(3, 0, 0, 0);
+	mT->translate(v);
+
+	v = new PuntoVector3D(0, 1, 0, 0);
+	mT->rotate(-10, v);
+}
+
+void Coche::retrocedeIzquierda() { // método público que para que se pueda acceder desde el main
+
+	PuntoVector3D * v = new PuntoVector3D(-3, 0, 0, 0);
+	mT->translate(v);
+
+	v = new PuntoVector3D(0, 1, 0, 0);
+	mT->rotate(-10, v);
+}
+
+void Coche::retrocedeDerecha() { 
+
+	PuntoVector3D * v = new PuntoVector3D(-3, 0, 0, 0);
+	mT->translate(v);
+
+	v = new PuntoVector3D(0, 1, 0, 0);
+	mT->rotate(10, v);
 }

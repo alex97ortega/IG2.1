@@ -19,7 +19,10 @@ class Coche :
 public:
 	Coche();
 	
-	void mover(short int n);
+	void avanzaIzquierda();
+	void avanzaDerecha();
+	void retrocedeIzquierda();
+	void retrocedeDerecha();
 private:
 	GLdouble mov;
 };

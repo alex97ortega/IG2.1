@@ -22,3 +22,4 @@ void ObjetoCompuesto::dibuja(){
 		o->dibuja();
 	glPopMatrix();
 }
+

@@ -9,6 +9,7 @@ class Escena :
 {
 public:
 	Escena();
+	Objeto3D * getCoche();
 private:
 	int numArboles;
 };

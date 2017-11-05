@@ -3,6 +3,7 @@
 #include <gl/GLU.h>
 
 #include "Escena.h"
+#include "Coche.h"
 
 #include <GL/freeglut.h>
 //#include <GL/glut.h>
@@ -152,8 +153,11 @@ void key(unsigned char key, int x, int y){
 		case 'x': angY=angY-5; break;
 		case 'd': angZ=angZ+5; break;
 		case 'c': angZ=angZ-5; break;  
-		//case 'q': e->mover(-1); break;
-		//case 'w': e->mover(1); break;
+		case 'u': static_cast<Coche*>(e->getCoche())->avanzaIzquierda(); break;
+		case 'i': static_cast<Coche*>(e->getCoche())->avanzaDerecha(); break;
+		case 'j': static_cast<Coche*>(e->getCoche())->retrocedeIzquierda(); break;
+		case 'k': static_cast<Coche*>(e->getCoche())->retrocedeDerecha(); break;
+
 		default:
 			need_redisplay = false;
 			break;

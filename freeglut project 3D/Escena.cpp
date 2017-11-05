@@ -7,7 +7,7 @@ Escena::Escena()
 	//EL COCHE SIEMPRE HABRA QUE ELVARLO 2 PARA QUE SE APOYE EN EL PLANO XZ
 
 	objetos.push_back(new Coche);
-	PuntoVector3D * v = new PuntoVector3D(0, 0.2, 0, 1);
+	PuntoVector3D * v = new PuntoVector3D(0, 2, 0, 1);
 	objetos[0]->mT->translate(v);
 	numArboles = 0;
 
@@ -40,3 +40,8 @@ Escena::Escena()
 		}
 	}
 }
+
+Objeto3D * Escena::getCoche() {
+	return objetos[0]; //El coche tiene que ser el primer objeto
+}
+
