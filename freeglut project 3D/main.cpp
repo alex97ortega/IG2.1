@@ -153,10 +153,10 @@ void key(unsigned char key, int x, int y){
 		case 'x': angY=angY-5; break;
 		case 'd': angZ=angZ+5; break;
 		case 'c': angZ=angZ-5; break;  
-		case 'u': static_cast<Coche*>(e->getCoche())->avanzaIzquierda(); break;
-		case 'i': static_cast<Coche*>(e->getCoche())->avanzaDerecha(); break;
-		case 'j': static_cast<Coche*>(e->getCoche())->retrocedeIzquierda(); break;
-		case 'k': static_cast<Coche*>(e->getCoche())->retrocedeDerecha(); break;
+		case 'u': static_cast<Coche*>(e->getCoche())->avanzaIzquierda(); e->compruebaColision(); break;
+		case 'i': static_cast<Coche*>(e->getCoche())->avanzaDerecha(); e->compruebaColision(); break;
+		case 'j': static_cast<Coche*>(e->getCoche())->retrocedeIzquierda(); e->compruebaColision(); break;
+		case 'k': static_cast<Coche*>(e->getCoche())->retrocedeDerecha(); e->compruebaColision(); break;
 
 		default:
 			need_redisplay = false;

@@ -10,6 +10,7 @@ class Escena :
 public:
 	Escena();
 	Objeto3D * getCoche();
+	void compruebaColision();
 private:
 	int numArboles;
 };

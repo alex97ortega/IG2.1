@@ -62,6 +62,6 @@ void TAfin::postMultiplica(GLfloat* m1) { //  post-multiplica (m= m * m1;)
 	glPopMatrix();
 }
 
-GLfloat *TAfin::getm() {
+GLfloat* TAfin::getm() {
 	return m;
 }

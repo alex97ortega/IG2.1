@@ -13,7 +13,7 @@ public:
 	void rotate(GLfloat ang, PuntoVector3D* v);
 	void scale(PuntoVector3D* v);
 	GLfloat *getm();
-private:
 	GLfloat m[16];
+private:
 };
 

@@ -1,1 +1,3 @@
-﻿  freeglut project 3D.vcxproj -> C:\Users\Jeremy\Desktop\IG2.1\Debug\freeglut project 3D.exe
+﻿  Escena.cpp
+c:\users\jeremy\desktop\ig2.1\freeglut project 3d\escena.cpp(38): warning C4244: 'argument': conversion from 'size_t' to 'GLfloat', possible loss of data
+  freeglut project 3D.vcxproj -> C:\Users\Jeremy\Desktop\IG2.1\Debug\freeglut project 3D.exe

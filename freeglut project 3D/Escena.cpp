@@ -1,6 +1,7 @@
 #include "Escena.h"
 #include<stdlib.h>
 
+#include <iostream>
 Escena::Escena()
 {
 	
@@ -45,3 +46,16 @@ Objeto3D * Escena::getCoche() {
 	return objetos[0]; //El coche tiene que ser el primer objeto
 }
 
+void Escena::compruebaColision() {
+	bool collision = false;
+	int i = 1;
+	while (!collision && i < numArboles) {
+		if (objetos[0]->mT->m[12] >= objetos[i]->mT->m[12] - 3 && objetos[0]->mT->m[12] <= objetos[i]->mT->m[12] + 3 &&
+			objetos[0]->mT->m[14] >= objetos[i]->mT->m[14] - 3 && objetos[0]->mT->m[14] <= objetos[i]->mT->m[14] + 3) {
+			collision = true;
+			objetos.erase(objetos.begin() + i);
+			--numArboles;
+		}
+		++i;
+	}
+}
