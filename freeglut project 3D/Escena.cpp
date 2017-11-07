@@ -1,5 +1,6 @@
 #include "Escena.h"
 #include<stdlib.h>
+#include <time.h>
 
 #include <iostream>
 Escena::Escena()
@@ -12,11 +13,11 @@ Escena::Escena()
 	objetos[0]->mT->translate(v);
 	numArboles = 0;
 
-
+	srand(time(NULL));
 	// (0,20),(20,0)
-	for (size_t i = 0; i < 50; i+=5) // 20 saltando cada 2 huecos para que haya más espacio entre árboles
+	for (size_t i = 5; i < 50; i+=5) // 20 saltando cada 2 huecos para que haya más espacio entre árboles
 	{
-		for (size_t j = 0; j < 50; j+=5)
+		for (size_t j = 5; j < 50; j+=5)
 		{
 			if (rand() % 4 == 0){ // se crea árbol
 				numArboles++;

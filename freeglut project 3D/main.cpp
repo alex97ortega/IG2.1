@@ -19,12 +19,12 @@ using namespace std;
 int WIDTH= 500, HEIGHT= 500;
 
 // Viewing frustum parameters
-GLdouble xRight=10, xLeft=-xRight, yTop=10, yBot=-yTop, N=1, F=1000;
+GLdouble xRight=10, xLeft=-xRight, yTop=20, yBot=-yTop, N=1, F=1000;
 
 // Camera parameters
-GLdouble eyeX=100.0, eyeY=100.0, eyeZ=100.0;
+GLdouble eyeX=0, eyeY=100.0, eyeZ=0;
 GLdouble lookX=0.0, lookY=0.0, lookZ=0.0;
-GLdouble upX=0, upY=1, upZ=0;
+GLdouble upX=1, upY=0, upZ=0;
 
 // Scene variables
 GLfloat angX, angY, angZ; 
@@ -139,6 +139,16 @@ void resize(int newWidth, int newHeight) {
 	glOrtho(xLeft, xRight, yBot, yTop, N, F);
 }
 
+void actualizaCamara(){
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	eyeX = e->getCoche()->mT->m[12];
+	eyeZ = e->getCoche()->mT->m[14];
+	lookX = e->getCoche()->mT->m[12];
+	lookZ = e->getCoche()->mT->m[14];
+	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
+}
+
 void key(unsigned char key, int x, int y){
 	bool need_redisplay = true;
 	switch (key) {
@@ -153,10 +163,30 @@ void key(unsigned char key, int x, int y){
 		case 'x': angY=angY-5; break;
 		case 'd': angZ=angZ+5; break;
 		case 'c': angZ=angZ-5; break;  
-		case 'u': static_cast<Coche*>(e->getCoche())->avanzaIzquierda(); e->compruebaColision(); break;
-		case 'i': static_cast<Coche*>(e->getCoche())->avanzaDerecha(); e->compruebaColision(); break;
-		case 'j': static_cast<Coche*>(e->getCoche())->retrocedeIzquierda(); e->compruebaColision(); break;
-		case 'k': static_cast<Coche*>(e->getCoche())->retrocedeDerecha(); e->compruebaColision(); break;
+		case 'u': 
+			if (!e->finJuego()){
+				static_cast<Coche*>(e->getCoche())->avanzaIzquierda();
+				e->compruebaColision(); actualizaCamara();
+			}			
+			break;
+		case 'i': 
+			if (!e->finJuego()){
+				static_cast<Coche*>(e->getCoche())->avanzaDerecha();
+				e->compruebaColision(); actualizaCamara();
+			}
+			break;
+		case 'j':
+			if (!e->finJuego()){
+				static_cast<Coche*>(e->getCoche())->retrocedeIzquierda();
+				e->compruebaColision(); actualizaCamara();
+			}
+			break;
+		case 'k':
+			if (!e->finJuego()){
+				static_cast<Coche*>(e->getCoche())->retrocedeDerecha();
+				e->compruebaColision(); actualizaCamara();
+			}
+			break;
 
 		default:
 			need_redisplay = false;

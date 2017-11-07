@@ -11,6 +11,7 @@ public:
 	Escena();
 	Objeto3D * getCoche();
 	void compruebaColision();
+	bool finJuego(){ return numArboles == 0; }
 private:
 	int numArboles;
 };

@@ -39,12 +39,12 @@ Coche::Coche()
 
 	v = new PuntoVector3D(0, 1, 0, 0);
 	RUEDA_DD->mT->rotate(180.0, v);
-	v = new PuntoVector3D(-1.2, -1, -2.5, 1);
+	v = new PuntoVector3D(-1.2, -1, -2.9, 1);
 	RUEDA_DD->mT->translate(v);
 
 	v = new PuntoVector3D(0, 1, 0, 0);
 	RUEDA_DA->mT->rotate(180.0, v);
-	v = new PuntoVector3D(1.2, -1, -2.5, 1);
+	v = new PuntoVector3D(1.2, -1, -2.9, 1);
 	RUEDA_DA->mT->translate(v);
 }
 

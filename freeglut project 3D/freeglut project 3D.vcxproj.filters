@@ -90,6 +90,9 @@
     <ClCompile Include="VerticeNormal.cpp">
       <Filter>Source Files\Fijas</Filter>
     </ClCompile>
+    <ClCompile Include="QuadtreeNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Objeto3D.h">
@@ -147,6 +150,9 @@
       <Filter>Header Files\Fijas</Filter>
     </ClInclude>
     <ClInclude Include="TAfin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadtreeNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
